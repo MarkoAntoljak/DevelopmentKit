@@ -7,14 +7,21 @@
 
 import Foundation
 
-public struct CountryCode {
+public class CountryCode {
     
-    public let name: String
+    public var name: String
     
-    public let flag: String
+    public var flag: String
     
-    public let phonePrefix: String
+    public var phonePrefix: String
     
-    public let countryCode: String
+    public var countryCode: String
+    
+    public init(name: String, flag: String, phonePrefix: String, countryCode: String) {
+        self.name = name
+        self.flag = flag
+        self.phonePrefix = phonePrefix
+        self.countryCode = countryCode
+    }
 
 }

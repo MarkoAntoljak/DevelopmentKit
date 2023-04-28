@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
-public struct Border {
-    var width: CGFloat
-    var color: CGColor
+public class Border {
+    
+    public var width: CGFloat
+    public var color: CGColor
+    
+    public init(width: CGFloat, color: CGColor) {
+        self.width = width
+        self.color = color
+    }
 }
