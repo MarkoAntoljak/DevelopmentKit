@@ -10,7 +10,7 @@ let package = Package(
     targets: [
         .target(
             name: "DevelopmentKit",
-            path: "Sources"
+            path: "Source"
         )
     ],
     swiftLanguageVersions: [.v5]
