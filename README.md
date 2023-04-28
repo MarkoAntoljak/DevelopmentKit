@@ -19,7 +19,7 @@ DevelopmentKit is a lightweight, easy-to-use framework for iOS development, maki
 To integrate DevelopmentKit into your Xcode project using CocoaPods, specify it in your Podfile:
 
 ```
-pod 'SwiftFrameworkName', :git => 'https://github.com/MarkoAntoljak/DevelopmentKit.git'
+pod 'DevelopmentKit', :git => 'https://github.com/MarkoAntoljak/DevelopmentKit.git'
 ```
 Then, run the following command:
 `
