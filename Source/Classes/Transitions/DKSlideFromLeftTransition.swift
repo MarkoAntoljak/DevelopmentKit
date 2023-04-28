@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// Custom navigation controllet transition that makes navigation controller slide from left to right.
-public class DKSlideFromLeftTransition: NSObject, UIViewControllerAnimatedTransitioning {
+open class DKSlideFromLeftTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     private let duration: TimeInterval
     
@@ -18,11 +18,11 @@ public class DKSlideFromLeftTransition: NSObject, UIViewControllerAnimatedTransi
         super.init()
     }
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
     
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromVC = transitionContext.viewController(forKey: .from),
               let toView = transitionContext.view(forKey: .to) else {
             return

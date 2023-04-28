@@ -8,7 +8,7 @@
 import UIKit
 
 /// Custom collection view horizontal layout.
-public class DKCollectionViewLayoutHorizontal: UICollectionViewCompositionalLayout {
+open class DKCollectionViewLayoutHorizontal: UICollectionViewCompositionalLayout {
     
     public init(withHeader: Bool = false,
                 numOfItemsInRow: CGFloat = 3.0,
@@ -40,7 +40,7 @@ public class DKCollectionViewLayoutHorizontal: UICollectionViewCompositionalLayo
         super.init(section: section)
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError()
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class DKImageView: UIImageView {
+open class DKImageView: UIImageView {
 
     public init(_ image: UIImage? = nil, scale: UIView.ContentMode = .scaleAspectFill, radius: CGFloat = 15.0, border: Border? = nil) {
         super.init(image: image)

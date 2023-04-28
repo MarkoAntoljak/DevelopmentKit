@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class DKActivityLoader: UIActivityIndicatorView {
+open class DKActivityLoader: UIActivityIndicatorView {
 
     public init(tint: UIColor = .white, background: UIColor = .clear, radius: CGFloat = 10.0, border: Border? = nil) {
         super.init(frame: .zero)
@@ -20,7 +20,7 @@ public class DKActivityLoader: UIActivityIndicatorView {
         }
     }
 
-    required init(coder: NSCoder) {
+    required public init(coder: NSCoder) {
         fatalError()
     }    
     

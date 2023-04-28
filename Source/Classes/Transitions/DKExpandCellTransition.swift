@@ -11,7 +11,7 @@ import UIKit
 /// Custom navigation controller transition that expands from setted frame.
 ///
 /// This is mostly used when you want a nice animation transition between tapping on a cell and navigating to new view controller.
-public class DKExpandCellTransition: NSObject, UIViewControllerAnimatedTransitioning {
+open class DKExpandCellTransition: NSObject, UIViewControllerAnimatedTransitioning {
     public let duration: TimeInterval
     public let frame: CGRect
 
@@ -21,11 +21,11 @@ public class DKExpandCellTransition: NSObject, UIViewControllerAnimatedTransitio
         super.init()
     }
 
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
 
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let toView = transitionContext.viewController(forKey: .to)?.view
 
         guard let toView = toView else {

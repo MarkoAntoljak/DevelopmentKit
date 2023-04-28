@@ -8,7 +8,7 @@
 import UIKit
 
 /// Custom button class
-public class DKButton: UIButton {
+open class DKButton: UIButton {
     
     private var title: String
     private var attributedTitle: NSAttributedString?
@@ -41,7 +41,7 @@ public class DKButton: UIButton {
             }
         }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError()
     }
     
@@ -80,12 +80,12 @@ public class DKButton: UIButton {
     
     // MARK: Enable or disable button
     
-    public func enableButton() {
+    open func enableButton() {
         self.backgroundColor = background
         self.isEnabled = true
     }
     
-    public func disableButton() {
+    open func disableButton() {
         self.backgroundColor = background.withAlphaComponent(0.3)
         self.isEnabled = false
     }
@@ -93,7 +93,7 @@ public class DKButton: UIButton {
     // MARK: Showing and Hiding Loader
     
     @available(iOS 15.0, *)
-    public func showLoader() {
+    open func showLoader() {
         setAttributedTitle(nil, for: .normal)
         setTitle(nil, for: .normal)
         configuration?.showsActivityIndicator = true
@@ -102,7 +102,7 @@ public class DKButton: UIButton {
     }
     
     @available(iOS 15.0, *)
-    public func hideLoader() {
+    open func hideLoader() {
         configuration?.showsActivityIndicator = false
         setPropreties()
     }

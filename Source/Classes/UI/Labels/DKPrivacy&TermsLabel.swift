@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class DKPrivacy_TermsLabel: DKLabel, UIGestureRecognizerDelegate {
+open class DKPrivacy_TermsLabel: DKLabel, UIGestureRecognizerDelegate {
     
     private var labelText: String
     private var termsTextRange: NSRange
@@ -51,7 +51,7 @@ public class DKPrivacy_TermsLabel: DKLabel, UIGestureRecognizerDelegate {
         setupLabel()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError()
     }
     
@@ -97,11 +97,11 @@ public class DKPrivacy_TermsLabel: DKLabel, UIGestureRecognizerDelegate {
         }
     }
     
-    public func termsTapped() {
+    open func termsTapped() {
         print("Terms Tapped!")
     }
     
-    public func privacyPolicyTapped() {
+    open func privacyPolicyTapped() {
         print("Privacy Policy Tapped!")
     }
     

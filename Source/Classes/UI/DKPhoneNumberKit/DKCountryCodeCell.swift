@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class DKCountryCodeCell: UITableViewCell {
+open class DKCountryCodeCell: UITableViewCell {
     
     public static let reuseIdentifier = "CountryCodeCell"
     public var model: CountryCode? {
@@ -17,13 +17,13 @@ public class DKCountryCodeCell: UITableViewCell {
     
     // MARK: UI
     
-    public let titleLabel: UILabel = {
+    open var titleLabel: UILabel = {
         let label = UILabel()
         label.font = semibold.withSize(16)
         label.textColor = .label
         return label
     }()
-    public let countryCodeLabel: UILabel = {
+    open var countryCodeLabel: UILabel = {
         let label = UILabel()
         label.font = bold.withSize(16)
         label.textColor = .label

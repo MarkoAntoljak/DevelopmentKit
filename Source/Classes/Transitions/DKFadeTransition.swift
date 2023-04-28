@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// Custom navigation transition that fades out the current navigation controller.
-public class DKFadeTransition: NSObject, UIViewControllerAnimatedTransitioning {
+open class DKFadeTransition: NSObject, UIViewControllerAnimatedTransitioning {
     private let duration: TimeInterval
     
     public init(duration: TimeInterval = 0.2) {
@@ -17,11 +17,11 @@ public class DKFadeTransition: NSObject, UIViewControllerAnimatedTransitioning {
         super.init()
     }
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
     
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let fromView = transitionContext.viewController(forKey: .from)?.view
         let toView = transitionContext.viewController(forKey: .to)?.view
         guard let fromVCView = fromView, let toVCView = toView else {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class DKLabel: UILabel {
+open class DKLabel: UILabel {
 
     public init(
         _ text: String?,
@@ -37,7 +37,7 @@ public class DKLabel: UILabel {
         }
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError()
     }
 }

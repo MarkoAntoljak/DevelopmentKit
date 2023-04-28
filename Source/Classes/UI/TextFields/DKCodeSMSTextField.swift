@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class DKCodeSMSTextField: UITextField, UITextFieldDelegate {
+open class DKCodeSMSTextField: UITextField, UITextFieldDelegate {
     
     // MARK: Attributes
     
@@ -34,7 +34,7 @@ public class DKCodeSMSTextField: UITextField, UITextFieldDelegate {
         configureTextField()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError()
     }
     

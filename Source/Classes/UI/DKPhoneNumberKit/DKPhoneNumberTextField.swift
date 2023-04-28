@@ -11,7 +11,7 @@ public protocol DKPhoneNumberTextFieldDelegate: AnyObject {
     func countryButtonPressed()
 }
 
-public class DKPhoneNumberTextField: UITextField {
+open class DKPhoneNumberTextField: UITextField {
     
     public weak var countryDelegate: DKPhoneNumberTextFieldDelegate?
     public var countryCode: CountryCode? {

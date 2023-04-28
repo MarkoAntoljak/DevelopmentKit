@@ -8,7 +8,7 @@
 import UIKit
 
 /// Creates UIView that looks like gradient shadow.
-public class DKShadowGradientView: UIView {
+open class DKShadowGradientView: UIView {
 
     private var gradientLayer: CAGradientLayer?
     private var colors: [CGColor] = []
@@ -19,7 +19,7 @@ public class DKShadowGradientView: UIView {
         setupGradient()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError()
     }
     
