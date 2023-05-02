@@ -12,12 +12,13 @@ open class DKCodeSMSTextField: UITextField, UITextFieldDelegate {
     // MARK: Attributes
     
     public var didEnterLastDigit: ((String) -> Void)?
+    public var fieldBackground: UIColor
+    public var fieldTextColor: UIColor
+    public var fieldTextFont: UIFont
     
     private var defaultCharacter: String
     private var codeCount: Int
-    
     private var digitLabels = [UILabel]()
-    
     private lazy var tapRecognizer: UITapGestureRecognizer = {
         let recognizer = UITapGestureRecognizer()
         recognizer.addTarget(self, action: #selector(becomeFirstResponder))
@@ -26,7 +27,10 @@ open class DKCodeSMSTextField: UITextField, UITextFieldDelegate {
     
     // MARK: Init
 
-    public init(placeholderCharacter: String = "", codeCount: Int = 6) {
+    public init(placeholderCharacter: String = "", codeCount: Int = 6, fieldBackground: UIColor = .secondarySystemBackground, fieldTextColor: UIColor = .label, fieldTextFont: UIFont = heavy.withSize(50)) {
+        self.fieldBackground = fieldBackground
+        self.fieldTextFont = fieldTextFont
+        self.fieldTextColor = fieldTextColor
         self.defaultCharacter = placeholderCharacter
         self.codeCount = codeCount
         super.init(frame: .zero)
@@ -69,7 +73,6 @@ open class DKCodeSMSTextField: UITextField, UITextFieldDelegate {
     }
     
     private func createLabelsStackView(with count: Int) -> UIStackView {
-        
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .fill
@@ -78,11 +81,11 @@ open class DKCodeSMSTextField: UITextField, UITextFieldDelegate {
         for _ in 1...count {
             let label = UILabel()
             label.textAlignment = .center
-            label.font = heavy.withSize(50)
+            label.font = fieldTextFont
             label.layer.masksToBounds = true
             label.layer.cornerRadius = 10
-            label.textColor = .label
-            label.backgroundColor = .secondarySystemBackground
+            label.textColor = fieldTextColor
+            label.backgroundColor = fieldBackground
             label.isUserInteractionEnabled = true
             label.text = defaultCharacter
             stackView.addArrangedSubview(label)

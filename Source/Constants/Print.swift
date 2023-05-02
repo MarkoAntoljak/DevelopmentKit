@@ -23,7 +23,7 @@ import Foundation
 ///   - line: The line of code where the printError is located in.
 public func printError(_ message: String, function: String = #function, file: String = #file, line: Int = #line) {
     let fileName = URL(fileURLWithPath: file).lastPathComponent
-    print("\n<<<<\nERROR: '\(message)' \nFunction: \(function) \nFile: \(fileName) \nLine: \(line)\n>>>>\n")
+    print("\nERROR: '\(message)' \nFunction: \(function) \nFile: \(fileName) \nLine: \(line)\n\n")
 }
 
 /// Prints the current code line.

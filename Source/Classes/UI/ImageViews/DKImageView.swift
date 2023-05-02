@@ -9,11 +9,14 @@ import UIKit
 
 open class DKImageView: UIImageView {
 
-    public init(_ image: UIImage? = nil, scale: UIView.ContentMode = .scaleAspectFill, radius: CGFloat = 15.0, border: Border? = nil) {
-        super.init(image: image)
+    public init(_ image: UIImage? = nil, scale: UIView.ContentMode = .scaleAspectFit, radius: CGFloat = 15.0, border: Border? = nil, tint: UIColor = .white, background: UIColor? = .clear) {
+        super.init(frame: .zero)
+        self.image = image
         clipsToBounds = true
-        contentMode = scale
         layer.masksToBounds = true
+        contentMode = scale
+        tintColor = tint
+        backgroundColor = background
         layer.cornerRadius = radius
         if let border = border {
             layer.borderColor = border.color

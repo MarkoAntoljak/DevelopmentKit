@@ -10,23 +10,17 @@ import UIKit
 open class DKLabel: UILabel {
 
     public init(
-        _ text: String?,
-        attributed: NSAttributedString? = nil,
+        text: String,
         color: UIColor = .label,
-        background: UIColor? = nil,
-        alignment: NSTextAlignment = .center,
-        radius: CGFloat = 0.0,
         font: UIFont = semibold.withSize(18),
+        alignment: NSTextAlignment = .center,
+        background: UIColor? = .clear,
+        radius: CGFloat = 0.0,
         border: Border? = nil,
         lines: Int = 0
     ) {
         super.init(frame: .zero)
-        if let text = text {
-            self.text = text
-            self.textColor = color
-            self.font = font
-        }
-        self.attributedText = attributed
+        self.attributedText = attributedString(text, font: font, color: color)
         self.backgroundColor = background
         self.numberOfLines = lines
         self.textAlignment = alignment

@@ -22,6 +22,6 @@ open class DKActivityLoader: UIActivityIndicatorView {
 
     required public init(coder: NSCoder) {
         fatalError()
-    }    
+    }
     
 }

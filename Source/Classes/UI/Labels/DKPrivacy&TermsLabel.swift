@@ -36,7 +36,7 @@ open class DKPrivacy_TermsLabel: DKLabel, UIGestureRecognizerDelegate {
                 termsTextRange: NSRange = NSRange(location: 42, length: 16),
                 privacyPolicyTextRange: NSRange = NSRange(location: 63, length: 15),
                 color: UIColor = .label,
-                background: UIColor? = nil,
+                background: UIColor? = .clear,
                 alignment: NSTextAlignment = .center,
                 radius: CGFloat = 0.0,
                 font: UIFont = semibold.withSize(18),
@@ -47,7 +47,7 @@ open class DKPrivacy_TermsLabel: DKLabel, UIGestureRecognizerDelegate {
         self.labelFont = font
         self.termsTextRange = termsTextRange
         self.privacyPolicyTextRange = privacyPolicyTextRange
-        super.init(nil, attributed: nil, color: color, background: background, alignment: alignment, radius: radius, font: font, border: border, lines: lines)
+        super.init(text: text, color: color, font: font, alignment: alignment, background: background, radius: radius, border: border, lines: lines)
         setupLabel()
     }
     

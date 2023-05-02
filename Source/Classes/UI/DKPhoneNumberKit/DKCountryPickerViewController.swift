@@ -8,9 +8,10 @@
 import UIKit
 
 public protocol DKCountryPickerVCDelegate: AnyObject {
+    /// Change the country code of a textField
     func selectedCountry(countryCode: CountryCode)
 }
-
+/// Country picker view controller, set delegate to use picked country
 public class DKCountryPickerViewController: UIViewController {
     
     public weak var delegate: DKCountryPickerVCDelegate?

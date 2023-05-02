@@ -74,12 +74,8 @@ public extension UIView {
     /// Makes view a circle.
     /// - Parameters:
     ///   - radius: Optional radius if you want to set specfiic corner radius.
-    func round(_ radius: CGFloat? = nil) {
-        if let radius = radius {
-            self.radius = radius
-        } else {
-            self.radius = self.frame.width / 2
-        }
+    func round(_ radius: CGFloat = 2.0) {
+        self.layer.cornerRadius = self.frame.width / radius
     }
     /// Adds shadow to a view
     ///
@@ -100,44 +96,14 @@ public extension UIView {
         layer.shadowOpacity = opacity
         layer.masksToBounds = false
     }
-    
-    var top: ConstraintItem {
-        self.snp.top
+    /// Ends editing for the current view
+    func endEditingOnTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCurrentView))
+        isUserInteractionEnabled = true
+        addGestureRecognizer(tap)
     }
-    var leading: ConstraintItem {
-        self.snp.leading
-    }
-    var height: ConstraintItem {
-        self.snp.height
-    }
-    var width: ConstraintItem {
-        self.snp.width
-    }
-    var bottom: ConstraintItem {
-        self.snp.bottom
-    }
-    var trailing: ConstraintItem {
-        self.snp.trailing
-    }
-    var centerX: ConstraintItem {
-        self.snp.centerX
-    }
-    var centerY: ConstraintItem {
-        self.snp.centerY
-    }
-    var center: ConstraintItem {
-        self.snp.center
-    }
-    var radius: CGFloat {
-        set { self.layer.cornerRadius = newValue }
-        get { self.layer.cornerRadius }
-    }
-    var borderColor: CGColor? {
-        set { self.layer.borderColor = newValue }
-        get { self.layer.borderColor }
-    }
-    var borderWidth: CGFloat {
-        set { self.layer.borderWidth = newValue }
-        get { self.layer.borderWidth }
+    /// Gets called when user tapps on screen
+    @objc private func didTapCurrentView() {
+        endEditing(true)
     }
 }

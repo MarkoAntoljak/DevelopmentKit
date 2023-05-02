@@ -47,8 +47,8 @@ public extension NSObject {
             i += 1
         }
     }
-    /// Removes notification observer. Put this function inside deinit.
-    func removeObserver() {
+    /// Removes notification observers. Put this function inside deinit.
+    func removeObservers() {
         NotificationCenter.default.removeObserver(self)
     }
 }

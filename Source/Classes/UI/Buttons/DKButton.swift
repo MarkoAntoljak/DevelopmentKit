@@ -21,7 +21,7 @@ open class DKButton: UIButton {
     public init(
         title: String = "Button",
         attributedTitle: NSAttributedString? = nil,
-        background: UIColor = .blue,
+        background: UIColor = .clear,
         buttonRadius: CGFloat = 15,
         tint: UIColor = .white,
         image: UIImage? = nil,
@@ -51,7 +51,7 @@ open class DKButton: UIButton {
         self.tintColor = tint
         self.backgroundColor = background
         self.layer.cornerRadius = buttonRadius
-        self.semanticContentAttribute = .forceRightToLeft
+        self.semanticContentAttribute = .forceLeftToRight
         if let attributedTitle = attributedTitle {
             setAttributedTitle(attributedTitle, for: .normal)
         } else {
@@ -68,6 +68,11 @@ open class DKButton: UIButton {
             layer.borderColor = border.color
             layer.borderWidth = border.width
         }
+    }
+    
+    public func removeImage() {
+        setImage(UIImage(), for: .normal)
+        setImage(UIImage(), for: .highlighted)
     }
     
     @available(iOS 15.0, *)

@@ -16,6 +16,14 @@ public extension UIViewController {
         navigationController?.navigationBar.barTintColor = .clear
         navigationController?.navigationBar.backgroundColor = .clear
     }
+    /// Makes the back button only present icon without text
+    func minimalBackButton() {
+        if #available(iOS 14.0, *) {
+            navigationItem.backButtonDisplayMode = .minimal
+        } else {
+            navigationItem.backButtonTitle = nil
+        }
+    }
     /// Make the navigation bar background color doesn't change while scrolling
     ///
     /// - Parameters:
@@ -36,10 +44,11 @@ public extension UIViewController {
     /// - Parameters:
     ///   - title: Title of the alert.
     ///   - message: Description of the alert.
-    ///   - handler: Optional completion when user presses ok action.
-    func presentAlert(_ title: String, _ message: String, completion: ((UIAlertAction) -> Void)? = nil) {
+    ///   - actionTitle: The title of the dissmis action. Default is "Ok".
+    ///   - completion: Optional completion when user presses ok action.
+    func presentAlert(_ title: String, message: String = "", actionTitle: String = "Ok", completion: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: completion))
+        alert.addAction(UIAlertAction(title: actionTitle, style: .cancel, handler: completion))
         DispatchQueue.main.async { [weak self] in
             self?.present(alert, animated: true)
         }

@@ -39,6 +39,8 @@
 		9D01475629FBD2C800D1E51E /* DKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01475529FBD2C800D1E51E /* DKImageView.swift */; };
 		9D01475829FBDA3500D1E51E /* DKPrivacy&TermsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01475729FBDA3500D1E51E /* DKPrivacy&TermsLabel.swift */; };
 		9D01475F29FBEAA700D1E51E /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01475E29FBEAA700D1E51E /* Print.swift */; };
+		9DC1285729FE88EE00D56CB7 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1285629FE88EE00D56CB7 /* Other.swift */; };
+		9DC1285929FE988A00D56CB7 /* DKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1285829FE988A00D56CB7 /* DKView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		9D01475729FBDA3500D1E51E /* DKPrivacy&TermsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DKPrivacy&TermsLabel.swift"; sourceTree = "<group>"; };
 		9D01475E29FBEAA700D1E51E /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 		9D01476029FBFC5F00D1E51E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DC1285629FE88EE00D56CB7 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
+		9DC1285829FE988A00D56CB7 /* DKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 			children = (
 				9D01475E29FBEAA700D1E51E /* Print.swift */,
 				9D01471529FA90C800D1E51E /* Fonts.swift */,
+				9DC1285629FE88EE00D56CB7 /* Other.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				9D01473B29FAF65800D1E51E /* DKShadowGradientView.swift */,
+				9DC1285829FE988A00D56CB7 /* DKView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -424,6 +430,7 @@
 				9D01474229FAF72D00D1E51E /* DKFadeTransition.swift in Sources */,
 				9D01475F29FBEAA700D1E51E /* Print.swift in Sources */,
 				9D01471B29FA9E2B00D1E51E /* DKButton.swift in Sources */,
+				9DC1285729FE88EE00D56CB7 /* Other.swift in Sources */,
 				9D01471D29FAA64A00D1E51E /* DKPhoneNumberTextField.swift in Sources */,
 				9D01474D29FBC92700D1E51E /* Border.swift in Sources */,
 				9D01471229FA903000D1E51E /* NSObjectExtension.swift in Sources */,
@@ -431,6 +438,7 @@
 				9D01471629FA90C800D1E51E /* Fonts.swift in Sources */,
 				9D01475629FBD2C800D1E51E /* DKImageView.swift in Sources */,
 				9D01470C29F97B5100D1E51E /* UIViewExtension.swift in Sources */,
+				9DC1285929FE988A00D56CB7 /* DKView.swift in Sources */,
 				9D01470729F979AD00D1E51E /* NSLocaleExtension.swift in Sources */,
 				9D01470329F9783D00D1E51E /* DateExtension.swift in Sources */,
 				9D01472A29FAAAB100D1E51E /* DKCountryCodeCell.swift in Sources */,

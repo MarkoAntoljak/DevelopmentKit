@@ -11,7 +11,7 @@ import UIKit
 open class DKCollectionViewLayoutHorizontal: UICollectionViewCompositionalLayout {
     
     public init(withHeader: Bool = false,
-                numOfItemsInRow: CGFloat = 3.0,
+                numOfItemsInRow: CGFloat,
                 itemHeight: NSCollectionLayoutDimension = .absolute(150),
                 itemWidth: NSCollectionLayoutDimension = .fractionalWidth(1.0),
                 spacing: CGFloat = 5.0) {
@@ -19,7 +19,7 @@ open class DKCollectionViewLayoutHorizontal: UICollectionViewCompositionalLayout
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0/numOfItemsInRow),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: itemHeight)
